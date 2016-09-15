@@ -4,14 +4,14 @@ public class FP_RRiveraG1_A06 {
     public static void main(String[] args) {
         int a,b;
         String o,r;
-        a = solicitarDato("a");
+        a = solicitarDato("a"); //pedir los datos
         b = solicitarDato("b");
         if (b<=0){
-            b = mensajeError(b);
+            b = mensajeError(b); //pedir hasta tener un dato mayor a 0
         }
-        o = solicitarOperacion();
-        r = resultados(o,a,b);
-        mostrarResultados(r);
+        o = solicitarOperacion(); //pedir el tipo de operacion
+        r = resultados(o,a,b); //hacer las operaciones
+        mostrarResultados(r); //mostrar el resultado
     }    
     public static int solicitarDato(String nombre){
         int dato;
@@ -19,7 +19,7 @@ public class FP_RRiveraG1_A06 {
         System.out.println("Ingrese el valor de "+ nombre + " : ");
         try{
             dato = teclado.nextInt();}
-        catch(InputMismatchException exception){
+        catch(InputMismatchException exception){ // atrapar errores
             System.out.println("El valor debe ser un numero entero");
             dato= solicitarDato(nombre); //metodos infinitos FTW
             return dato;
@@ -30,8 +30,8 @@ public class FP_RRiveraG1_A06 {
         String tipo;
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escriba la inicial de la operacion que desea hacer.('S'uma, 'R'esta, 'D'ivision, 'M'ultiplicacion, 'T'odas las anteriores): ");
-        tipo = teclado.nextLine();
-        while(!tipo.equals("D") && !tipo.equals("R") && !tipo.equals("T") && !tipo.equals("S") && !tipo.equals("M")){
+        tipo = teclado.nextLine(); //pedir tipo de operacion
+        while(!tipo.equals("D") && !tipo.equals("R") && !tipo.equals("T") && !tipo.equals("S") && !tipo.equals("M")){ //revisar que sea valido la respuesta
             System.out.println("Valor incorrecto");
             System.out.println("Escriba la inicial de la operacion que desea hacer.('S'uma, 'R'esta, 'D'ivision, 'M'ultiplicacion, 'T'odas las anteriores): ");
             tipo = teclado.nextLine();
@@ -40,7 +40,7 @@ public class FP_RRiveraG1_A06 {
     }
     public static String resultados(String operacion, int dato1, int dato2){
         String resultado;
-        switch(operacion){
+        switch(operacion){  //preparar el resultado que sera mostrado
             case "S": return resultado="El resultado de "+dato1+"+"+dato2+" es: "+((double)dato1+dato2);
             case "R": return resultado = "El resultado de "+dato1+"-"+dato2+" es: "+((double)dato1-dato2);
             case "D": return resultado = "El resultado de "+dato1+"/"+dato2+" es: "+((double)dato1/dato2);
@@ -53,9 +53,9 @@ public class FP_RRiveraG1_A06 {
         }
     }
     public static void mostrarResultados(String mensaje){
-        System.out.println(mensaje);
+        System.out.println(mensaje); //mostrar resultado
     }        
-    public static int mensajeError(int numero){
+    public static int mensajeError(int numero){ //se repite hasta tener un valor valido
         Scanner teclado= new Scanner(System.in);
         while(numero<=0){
             System.out.println("Valor incorrecto, ingrese un numero mayor a 0");
