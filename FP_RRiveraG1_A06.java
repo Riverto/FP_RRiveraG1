@@ -7,18 +7,15 @@ import java.util.*;
 public class FP_RRiveraG1_A06 {
     public static void main(String[] args) {
         int a,b;
-        String o;
+        String o,r;
         a = solicitarDato("a");
         b = solicitarDato("b");
         if (b<=0){
             b = mensajeError(b);
         }
         o = solicitarOperacion();
-        resultados(o,a,b);
- /*       resultadoSuma = calcular("S",a,b);
-        resultadoResta = calcular("R",a,b);
-        resultadoDiv = calcular("D",a,b);
-        resultadoProd = calcular("P",a,b); */
+        r = resultados(o,a,b);
+        mostrarResultados(r);
     }    
     public static int solicitarDato(String nombre){
         int dato;
@@ -45,31 +42,23 @@ public class FP_RRiveraG1_A06 {
         }
         return tipo;
     }
-    public static void resultados(String operacion, int dato1, int dato2){
+    public static String resultados(String operacion, int dato1, int dato2){
         String resultado;
         switch(operacion){
-            case "S": resultado = "El resultado de "+dato1+"+"+dato2+" es: "+((double)dato1+dato2);
-                            System.out.println(resultado);
-                            break;
-            case "R": resultado = "El resultado de "+dato1+"-"+dato2+" es: "+((double)dato1-dato2);
-                            System.out.println(resultado);
-                            break;
-            case "D": resultado = "El resultado de "+dato1+"/"+dato2+" es: "+((double)dato1/dato2);
-                            System.out.println(resultado);
-                            break;
-            case "M": resultado = "El resultado de "+dato1+"*"+dato2+ " es: "+((double)dato1*dato2);
-                            System.out.println(resultado);
-                            break;
-            case "T": resultado = "El resultado de "+dato1+"+"+dato2+" es: "+((double)dato1+dato2)+"\n"
+            case "S": return resultado="El resultado de "+dato1+"+"+dato2+" es: "+((double)dato1+dato2);
+            case "R": return resultado = "El resultado de "+dato1+"-"+dato2+" es: "+((double)dato1-dato2);
+            case "D": return resultado = "El resultado de "+dato1+"/"+dato2+" es: "+((double)dato1/dato2);
+            case "M": return resultado = "El resultado de "+dato1+"*"+dato2+ " es: "+((double)dato1*dato2);
+            case "T": return resultado = "El resultado de "+dato1+"+"+dato2+" es: "+((double)dato1+dato2)+"\n"
                     +"El resultado de "+dato1+"-"+dato2+" es: "+((double)dato1-dato2)+"\n"
                     + "El resultado de "+dato1+"/"+dato2+" es: "+((double)dato1/dato2)+"\n"
                     +"El resultado de "+dato1+"*"+dato2+ " es: "+((double)dato1*dato2);
-                            System.out.println(resultado);
-                            break;
-            default: System.out.println("Como llegaste a aqui?");
-                          break;
+            default: return resultado=("Como llegaste aqui?");
         }
     }   
+    public static void mostrarResultados(String mensaje){
+        System.out.println(mensaje);
+    }    
     public static int mensajeError(int numero){
         Scanner teclado= new Scanner(System.in);
         while(numero<=0){
