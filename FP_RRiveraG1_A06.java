@@ -29,11 +29,11 @@ public class FP_RRiveraG1_A06 {
     public static String solicitarOperacion(){
         String tipo;
         Scanner teclado = new Scanner(System.in);
-        System.out.println("Escriba la inicial de la operacion que desea hacer.('S'uma, 'R'esta, 'D'ivision, 'M'ultiplicación, 'T'odas las anteriores): ");
+        System.out.println("Escriba la inicial de la operacion que desea hacer.('S'uma, 'R'esta, 'D'ivision, 'M'ultiplicacion, 'T'odas las anteriores): ");
         tipo = teclado.nextLine();
         while(!tipo.equals("D") && !tipo.equals("R") && !tipo.equals("T") && !tipo.equals("S") && !tipo.equals("M")){
             System.out.println("Valor incorrecto");
-            System.out.println("Escriba la inicial de la operacion que desea hacer.('S'uma, 'R'esta, 'D'ivision, 'M'ultiplicación, 'T'odas las anteriores): ");
+            System.out.println("Escriba la inicial de la operacion que desea hacer.('S'uma, 'R'esta, 'D'ivision, 'M'ultiplicacion, 'T'odas las anteriores): ");
             tipo = teclado.nextLine();
         }
         return tipo;
