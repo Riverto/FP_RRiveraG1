@@ -1,9 +1,5 @@
 package fp_rriverag1_a06;
 import java.util.*;
-/**
- *
- * @author Riverto
- */
 public class FP_RRiveraG1_A06 {
     public static void main(String[] args) {
         int a,b;
@@ -58,7 +54,7 @@ public class FP_RRiveraG1_A06 {
     }
     public static void mostrarResultados(String mensaje){
         System.out.println(mensaje);
-    }    
+    }        
     public static int mensajeError(int numero){
         Scanner teclado= new Scanner(System.in);
         while(numero<=0){
