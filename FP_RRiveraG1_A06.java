@@ -55,7 +55,7 @@ public class FP_RRiveraG1_A06 {
                     +"El resultado de "+dato1+"*"+dato2+ " es: "+((double)dato1*dato2);
             default: return resultado=("Como llegaste aqui?");
         }
-    }   
+    }
     public static void mostrarResultados(String mensaje){
         System.out.println(mensaje);
     }    
