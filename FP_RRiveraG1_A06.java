@@ -22,7 +22,7 @@ public class FP_RRiveraG1_A06 {
             return dato;
         }
         if ("b".equals(nombre)){
-            dato = mensajeError(dato);
+            dato = mayorqueCero(dato);
             return dato;} //pedir hasta tener un dato mayor a 0
         return dato;
     }    
@@ -55,7 +55,7 @@ public class FP_RRiveraG1_A06 {
     public static void mostrarResultados(String mensaje){
         System.out.println(mensaje); //mostrar resultado
     }        
-    public static int mensajeError(int numero){ //se repite hasta tener un valor valido
+    public static int mayorqueCero(int numero){ //se repite hasta tener un valor valido
         Scanner teclado= new Scanner(System.in);
         while(numero<=0){
             System.out.println("Valor incorrecto, ingrese un numero mayor a 0");
