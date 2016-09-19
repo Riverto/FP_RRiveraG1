@@ -6,9 +6,6 @@ public class FP_RRiveraG1_A06 {
         String o,r;
         a = solicitarDato("a"); //pedir los datos
         b = solicitarDato("b");
-        if (b<=0){
-            b = mensajeError(b); //pedir hasta tener un dato mayor a 0
-        }
         o = solicitarOperacion(); //pedir el tipo de operacion
         r = resultados(o,a,b); //hacer las operaciones
         mostrarResultados(r); //mostrar el resultado
@@ -24,6 +21,9 @@ public class FP_RRiveraG1_A06 {
             dato= solicitarDato(nombre); //metodos infinitos FTW
             return dato;
         }
+        if ("b".equals(nombre)){
+            dato = mensajeError(dato);
+            return dato;} //pedir hasta tener un dato mayor a 0
         return dato;
     }    
     public static String solicitarOperacion(){
