@@ -59,8 +59,8 @@ public class FP_RRiveraG1_A06 {
         Scanner teclado= new Scanner(System.in);
         while(numero<=0){
             System.out.println("Valor incorrecto, ingrese un numero mayor a 0");
-            numero = teclado.nextInt();
-        }
+            numero = solicitarDato("b");
+            }
         return numero;
     }    
 }
