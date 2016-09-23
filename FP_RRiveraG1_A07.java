@@ -5,8 +5,6 @@ public class FP_RRiveraG1_A7 {
 
     public static void main(String[] args) {
         int[][]arr = tamañoArray();
-        System.out.println("El tamaño del arreglo 1 es "+arr.length);
-        System.out.println("El tamaño del arreglo 2 es "+arr[0].length);
         arr = llenarvector(arr);
         mostrartabla(arr);
     }
@@ -21,8 +19,6 @@ public class FP_RRiveraG1_A7 {
     return a;
     }
     public static int[][] llenarvector(int[][] a){
-        System.out.println("El tamaño del arreglo 1 es "+a.length);
-        System.out.println("El tamaño del arreglo 2 es "+a[0].length);
         for (int i=0; i<a.length; i++){
             for (int j=0; j<a[0].length;j++){
                 a[i][j]=j+1;
