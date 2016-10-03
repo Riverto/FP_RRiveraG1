@@ -37,15 +37,24 @@ public class FP_RRiveraG1_menu {
         switch (op){
             case 1:
                 area = areaCuadrado();
+                break;
             case 2:
                 area = areaCirculo();
+                break;
             case 3:
                 area = areaTriangulo();
+                break;
             default:
                 mensajeSalida();
         }
         return area;
     }
+    public static float solicitarDatos(string tipo);
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduzca el valor: " + );
+    
     public static float areaCuadrado();
-        
+        float a,b,area;
+        Scanner entrada = new Scanner(System.in);
+        a = solicitarDatos("altura");
 }
