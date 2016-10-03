@@ -32,4 +32,20 @@ public class FP_RRiveraG1_menu {
         }while(opcion<0 || opcion>3);
         return opcion;
     }
+    public static float calcularArea(int op){
+        float area;
+        switch (op){
+            case 1:
+                area = areaCuadrado();
+            case 2:
+                area = areaCirculo();
+            case 3:
+                area = areaTriangulo();
+            default:
+                mensajeSalida();
+        }
+        return area;
+    }
+    public static float areaCuadrado();
+        
 }
