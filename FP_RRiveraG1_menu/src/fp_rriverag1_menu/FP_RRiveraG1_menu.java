@@ -49,12 +49,12 @@ public class FP_RRiveraG1_menu {
         }
         return area;
     }
-    public static float solicitarDatos(string tipo);
+    public static float solicitarDatos(string tipo){
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduzca el valor: " + );
-    
-    public static float areaCuadrado();
+    }
+    public static float areaCuadrado();{
         float a,b,area;
-        Scanner entrada = new Scanner(System.in);
         a = solicitarDatos("altura");
+}
 }
