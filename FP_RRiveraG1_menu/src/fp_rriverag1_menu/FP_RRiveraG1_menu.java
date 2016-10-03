@@ -15,7 +15,7 @@ public class FP_RRiveraG1_menu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("La opcion elefida es: " +  menu());    
+        System.out.println("La opcion elegida es: " +  menu());    
     }
     public static int menu(){
         Scanner entrada = new Scanner(System.in);
@@ -23,12 +23,13 @@ public class FP_RRiveraG1_menu {
         do{
         System.out.println("**** Calculo de areas ****");
         System.out.println("**** Menu ****");
-        System.out.println("Introdusca la opcion deseada:");
-        System.out.println("Area de cuadrados");
-        System.out.println("Area de circulos");
-        System.out.println("Area de triangulos");
+        System.out.println("1. Area de cuadrados");
+        System.out.println("2. Area de circulos");
+        System.out.println("3. Area de triangulos");
+        System.out.println("0. Salir");
+        System.out.print("Introdusca la opcion deseada: ");
         opcion = entrada.nextInt();
-        }while(opcion<=0 && opcion>=3);
+        }while(opcion<0 || opcion>3);
         return opcion;
     }
 }
