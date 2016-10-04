@@ -72,5 +72,13 @@ public class FP_RRiveraG1_menu {
         area = (float) (pi*Math.pow(r, 2));
         return area;
     }
+    public static float areaTriangulo(){
+        float area;
+        double b,h;
+        b = solicitarDatos("la base");
+        h = solicitarDatos("la altura");
+        area = (float)(b*h/2);
+        return area;
+    }
 }
 
