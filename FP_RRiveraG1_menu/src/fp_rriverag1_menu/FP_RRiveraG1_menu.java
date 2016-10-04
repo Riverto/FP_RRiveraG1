@@ -49,12 +49,28 @@ public class FP_RRiveraG1_menu {
         }
         return area;
     }
-    public static float solicitarDatos(string tipo){
+    public static double solicitarDatos(String tipo){
+        double dato;
         Scanner entrada = new Scanner(System.in);
-        System.out.print("Introduzca el valor: " + );
+        System.out.print("Introduzca el valor de " + tipo + " : ");
+        dato = entrada.nextDouble();
+        return dato;
     }
-    public static float areaCuadrado();{
-        float a,b,area;
-        a = solicitarDatos("altura");
+    public static float areaCuadrado(){
+        float area;
+        double a;
+        a = solicitarDatos("un lado");
+        area = (float) Math.pow(a, 2);
+        return area;
+        }
+    public static float areaCirculo(){
+        float area;
+        double r;
+        final double pi;
+        pi = 3.14;
+        r = solicitarDatos("el radio");
+        area = (float) (pi*Math.pow(r, 2));
+        return area;
+    }
 }
-}
+
