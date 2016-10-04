@@ -17,7 +17,6 @@ public class FP_RRiveraG1_menu {
     public static void main(String[] args) {
         int o;
         o = menu();
-        System.out.println("La opcion elegida es: " +  o);
         System.out.println("El area es : "+calcularArea(o)); //muestra resultados
     }
     public static int menu(){
@@ -33,6 +32,7 @@ public class FP_RRiveraG1_menu {
         System.out.print("Introdusca la opcion deseada: ");
         opcion = entrada.nextInt();
         }while(opcion<0 || opcion>3);
+        System.out.println("La opcion elegida es: " +  opcion);
         return opcion;
     }
     public static float calcularArea(int op){
