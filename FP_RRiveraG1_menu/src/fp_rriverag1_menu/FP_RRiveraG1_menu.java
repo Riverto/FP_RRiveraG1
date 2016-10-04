@@ -18,7 +18,7 @@ public class FP_RRiveraG1_menu {
         int o;
         o = menu();
         System.out.println("La opcion elegida es: " +  o);
-        System.out.println(calcularArea(o));
+        System.out.println("El area es : "+calcularArea(o)); //muestra resultados
     }
     public static int menu(){
         Scanner entrada = new Scanner(System.in);
@@ -37,7 +37,7 @@ public class FP_RRiveraG1_menu {
     }
     public static float calcularArea(int op){
         float area;
-        area=0; //para que no se queje el IDE
+        area=0; //para que no se queje el IDE de no tener la variable inicializada
         switch (op){
             case 1:
                 area = areaCuadrado();
@@ -53,7 +53,7 @@ public class FP_RRiveraG1_menu {
         }
         return area;
     }
-    public static double solicitarDatos(String tipo){
+    public static double solicitarDatos(String tipo){ //pide datos con el nombre que se le entregue
         double dato;
         Scanner entrada = new Scanner(System.in);
         System.out.print("Introduzca el valor de " + tipo + " : ");
@@ -63,8 +63,8 @@ public class FP_RRiveraG1_menu {
     public static float areaCuadrado(){
         float area;
         double a;
-        a = solicitarDatos("un lado");
-        area = (float) Math.pow(a, 2);
+        a = solicitarDatos("un lado"); //pide dato
+        area = (float) Math.pow(a, 2); //calcula
         return area;
         }
     public static float areaCirculo(){
@@ -72,20 +72,20 @@ public class FP_RRiveraG1_menu {
         double r;
         final double pi;
         pi = 3.14;
-        r = solicitarDatos("el radio");
-        area = (float) (pi*Math.pow(r, 2));
+        r = solicitarDatos("el radio"); //pide dato
+        area = (float) (pi*Math.pow(r, 2)); //calcula
         return area;
     }
     public static float areaTriangulo(){
         float area;
         double b,h;
-        b = solicitarDatos("la base");
-        h = solicitarDatos("la altura");
-        area = (float)(b*h/2);
+        b = solicitarDatos("la base"); //pide dato
+        h = solicitarDatos("la altura"); //pide dato
+        area = (float)(b*h/2); //calcula
         return area;
     }
     public static void mensajeSalida(){
-        System.out.println("Gracias por usar el programa");
+        System.out.println("Gracias por usar el programa"); //despedida
         System.exit(0);
     }
 }
