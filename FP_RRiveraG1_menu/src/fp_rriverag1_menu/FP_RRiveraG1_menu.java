@@ -5,6 +5,7 @@
  */
 package fp_rriverag1_menu;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 /**
  *
  * @author Riverto
@@ -15,7 +16,10 @@ public class FP_RRiveraG1_menu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("La opcion elegida es: " +  menu());    
+        int o;
+        o = menu();
+        System.out.println("La opcion elegida es: " +  o);
+        System.out.println(calcularArea(o));
     }
     public static int menu(){
         Scanner entrada = new Scanner(System.in);
@@ -34,16 +38,17 @@ public class FP_RRiveraG1_menu {
     }
     public static float calcularArea(int op){
         float area;
+        area=0; //para que no se queje el IDE
         switch (op){
             case 1:
                 area = areaCuadrado();
-                break;
+                return area;
             case 2:
                 area = areaCirculo();
-                break;
+                return area;
             case 3:
                 area = areaTriangulo();
-                break;
+                return area;
             default:
                 mensajeSalida();
         }
@@ -80,5 +85,8 @@ public class FP_RRiveraG1_menu {
         area = (float)(b*h/2);
         return area;
     }
+    public static void mensajeSalida(){
+        System.out.println("Gracias por usar el programa");
+        System.exit(0);
+    }
 }
-
