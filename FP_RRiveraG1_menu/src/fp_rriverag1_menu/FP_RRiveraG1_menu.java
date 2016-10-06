@@ -17,7 +17,7 @@ public class FP_RRiveraG1_menu {
     public static void main(String[] args) {
         int o;
         o = menu();
-        System.out.println("El area es : "+calcularArea(o)); //muestra resultados
+        System.out.println("El area de su "+mostrarForma(o)+" : "+calcularArea(o)); //muestra resultados
     }
     public static int menu(){
         Scanner entrada = new Scanner(System.in);
@@ -52,6 +52,23 @@ public class FP_RRiveraG1_menu {
                 area=0;
         }
         return area;
+    }
+        public static String mostrarForma(int op){
+        String forma;
+        switch (op){
+            case 1:
+                forma = "cuadrado";
+                return forma;
+            case 2:
+                forma = "circulo";
+                return forma;
+            case 3:
+                forma = "cuadrado";
+                return forma;
+            default:
+                forma="";
+        }
+        return forma;
     }
     public static double solicitarDatos(String tipo){ //pide datos con el nombre que se le entregue
         double dato;
