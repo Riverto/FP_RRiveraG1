@@ -37,7 +37,6 @@ public class FP_RRiveraG1_menu {
     }
     public static float calcularArea(int op){
         float area;
-        area=0; //para que no se queje el IDE de no tener la variable inicializada
         switch (op){
             case 1:
                 area = areaCuadrado();
@@ -50,6 +49,7 @@ public class FP_RRiveraG1_menu {
                 return area;
             default:
                 mensajeSalida();
+                area=0;
         }
         return area;
     }
