@@ -15,9 +15,10 @@ public class FP_RRiveraG1_menu {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int o;
+        int o,r;
         o = menu();
         System.out.println("El area de su "+mostrarForma(o)+" : "+calcularArea(o)); //muestra resultados
+        cont();
     }
     public static int menu(){
         Scanner entrada = new Scanner(System.in);
@@ -104,5 +105,24 @@ public class FP_RRiveraG1_menu {
     public static void mensajeSalida(){
         System.out.println("Gracias por usar el programa"); //despedida
         System.exit(0);
+    }
+    public static void cont(){
+        int resp;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Desea continuar?");
+        System.out.println("1. Si");
+        System.out.println("0. No");        
+        resp = entrada.nextInt();
+        if (resp<0 || resp>1){
+            cont();} else {
+            switch(resp){
+                case 1:
+                    main(null);
+                    break;
+                default:
+                    mensajeSalida();
+                    break;
+            }
+        }
     }
 }
