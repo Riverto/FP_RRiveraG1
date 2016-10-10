@@ -32,7 +32,7 @@ public class PP2Problema3 {
             int a=1;
             while(n>0){ //multiplica por n hasta que sea 1
                 a = a*n;
-                n--; //disminuye n
+                n--; //disminuye n por 1
             }
             return a;
         }
