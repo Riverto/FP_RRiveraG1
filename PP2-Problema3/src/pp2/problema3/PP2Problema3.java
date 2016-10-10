@@ -30,9 +30,9 @@ public class PP2Problema3 {
         }
         public static int calcularFactorial(int n){
             int a=1;
-            while(n>0){
+            while(n>0){ //multiplica por n hasta que sea 1
                 a = a*n;
-                n=n-1;
+                n--; //disminuye n
             }
             return a;
         }
