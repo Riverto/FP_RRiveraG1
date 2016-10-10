@@ -20,6 +20,7 @@ public class PP2Problema3 {
         numero = pedirNumero();
         f=calcularFactorial(numero);
         System.out.println("El factorial de "+numero+" es: "+f);
+        cont();
     }
         public static int pedirNumero(){
         int n;
@@ -36,4 +37,27 @@ public class PP2Problema3 {
             }
             return a;
         }
+    public static void cont(){
+        int resp;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Desea continuar?"); //menu
+        System.out.println("1. Si");
+        System.out.println("0. No");        
+        resp = entrada.nextInt();
+        if (resp<0 || resp>1){ //comprobación de respuesta
+            cont();} else {
+            switch(resp){
+                case 1:
+                    main(null);
+                    break;
+                default:
+                    mensajeSalida();
+                    break;
+            }
+        }
+    }
+    public static void mensajeSalida(){
+        System.out.println("Gracias por usar el programa"); //despedida
+        System.exit(0);
+    }
 }
