@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pp2.problema1;
 import java.util.*;
 
@@ -18,7 +13,7 @@ public class PP2Problema1 {
     public static void main(String[] args) {
         int año;
         año = askAño(); //pide año
-        checkLeap(año); //checa año
+        checkLeap(año); //checa año e imprime el resultados
     }
     public static int askAño(){
         int año;
@@ -35,7 +30,6 @@ public class PP2Problema1 {
             cont();
         }
         if ((a % 100)==0){ //revisa si es divisible por 100
-            
         } else {
             System.out.println("El año "+a+" es bisiesto");
             cont();
