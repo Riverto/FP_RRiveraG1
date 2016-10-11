@@ -16,7 +16,8 @@ public class PP2Problema3 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int numero,f;
+        int numero;
+        double f;
         numero = pedirNumero();
         f=calcularFactorial(numero);
         System.out.println("El factorial de "+numero+" es: "+f);
@@ -26,11 +27,11 @@ public class PP2Problema3 {
         int n;
         Scanner teclado = new Scanner(System.in);
         System.out.print("Introduzca el numero del cual quiere calcular el factorial: ");
-        n = teclado.nextInt(); //recibe los metros
+        n = teclado.nextInt(); //recibe el numero
         return n;
         }
-        public static int calcularFactorial(int n){
-            int a=1;
+        public static double calcularFactorial(int n){
+            double a=1;
             while(n>0){ //multiplica por n hasta que sea 1
                 a = a*n;
                 n--; //disminuye n por 1
