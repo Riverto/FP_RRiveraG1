@@ -19,6 +19,7 @@ public class PP2Problema5 {
         int numero;
         numero = pedirNumero();
         resultado(checarPrimo(numero),numero);
+        cont();
     }
     public static int pedirNumero(){
         Scanner entrada = new Scanner(System.in);
@@ -37,9 +38,32 @@ public class PP2Problema5 {
     }
     public static void resultado(boolean fot,int n){
         if(fot==true){
-            System.out.println("El "+n+" es primo");
+            System.out.println("El numero "+n+" es primo.");
         } else {
-            System.out.println("El "+n+" no es primo");
+            System.out.println("El numero "+n+" no es primo.");
+        }
+    }
+    public static void mensajeSalida(){
+        System.out.println("Gracias por usar el programa"); //despedida
+        System.exit(0);
+    }
+    public static void cont(){
+        int resp;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Desea continuar?");
+        System.out.println("1. Si");
+        System.out.println("0. No");        
+        resp = entrada.nextInt();
+        if (resp<0 || resp>1){
+            cont();} else {
+            switch(resp){
+                case 1:
+                    main(null);
+                    break;
+                default:
+                    mensajeSalida();
+                    break;
+            }
         }
     }
 }
