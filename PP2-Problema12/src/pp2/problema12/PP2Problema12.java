@@ -5,7 +5,6 @@
  */
 package pp2.problema12;
 import java.util.Scanner;
-import java.util.Vector;
 
 /**
  *
