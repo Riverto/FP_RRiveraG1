@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package pp2.problema13;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *
@@ -27,7 +27,9 @@ public class PP2Problema13 {
         Scanner entrada = new Scanner(System.in);
         for(int i=0;i<v.length;i++){
             System.out.print("Introduce un numero para la posicion ["+ (i+1) +"] :");
-            v[i]=entrada.nextInt();
+           v[i]=entrada.nextInt();
+//            Random ran = new Random();    //autofill
+//            v[i]=ran.nextInt(100+1);           //autofill
         }
     return v;}
     public static int promedioVector(int[] v){
@@ -47,6 +49,7 @@ public class PP2Problema13 {
             }
         }
         System.out.println("La cantidad de numeros sobre el promedio es: "+ovr);
+        System.out.println("La cantidad de numeros debajo del promedio es: "+(v.length-ovr));
     }
     public static void mensajeSalida(){
         System.out.println("Gracias por usar el programa"); //despedida
