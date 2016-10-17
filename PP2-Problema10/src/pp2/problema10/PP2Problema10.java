@@ -33,7 +33,7 @@ public class PP2Problema10 {
     public static void fiboSeq(int n){
         int f1=1,f2=1;
         System.out.println("Los primeros "+n+" digitos de la serie de Fibonacci son: ");
-        System.out.print(f1+" ");
+        System.out.print("0 "+f1+" ");
         for(int i=2;i<n;i++){
             System.out.print(f2+" ");
             f2 = f1 + f2;
