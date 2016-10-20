@@ -36,13 +36,11 @@ public class PP2Problema11 {
         String []array = new String[4];
         for(int i=10;i<=n*10;i=i*10){
             v = ((n%i)/(i/10))*(i/10);
-            System.out.print("v = "+v);
             if(v==0) rom="";
             if(v>0&&v<10)rom=unidades(v);
             if(v>9&&v<100) rom=decenas(v);
             if(v>99&&v<1000) rom=centenas(v);
             if(v>999&&v<10000) rom=milares(v);
-            System.out.println(rom);
             array[p]=rom;
             p++;
         }
