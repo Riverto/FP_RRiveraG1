@@ -28,15 +28,15 @@ public class PP2Problema5 {
         return num;
     }
     public static boolean checarPrimo(int n){
-        if (n<2) return false;
-        if(n==2) return true;
-        if(n%2==0) return false;
+        if (n<2) return false; //si es menos de 2 no es primo
+        if(n==2) return true; //si es 2 es primo
+        if(n%2==0) return false; //si es par no es primo
         for(int i=3;i*i<n;i+=2){
-            if (n%i==0) return false;
+            if (n%i==0) return false; //checa todos los numeros hasta antes de la raiz del numero
         }
             return true;
     }
-    public static void resultado(boolean fot,int n){
+    public static void resultado(boolean fot,int n){//imprime si es primo
         if(fot==true){
             System.out.println("El numero "+n+" es primo.");
         } else {
