@@ -23,7 +23,7 @@ public class PPProblema4 {
         return n;
         }    
     public static void CtoF(int g){
-        System.out.println(g+"°C es: "+(g*1.8+32)+"°F");
+        System.out.println(g+"°C es: "+(g*1.8+32)+"°F");//convierte C a F
     }
     public static void cont(){
         int resp;
