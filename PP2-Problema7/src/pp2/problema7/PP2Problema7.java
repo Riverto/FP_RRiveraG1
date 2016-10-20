@@ -20,13 +20,13 @@ public class PP2Problema7 {
         cont();
     }
     public static double pedirNumero(String tipo){
-    Scanner entrada = new Scanner(System.in);
-    System.out.print("Ingrese el "+tipo+" : ");
-    double num=entrada.nextDouble();
-    return num;
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Ingrese el "+tipo+" : ");
+        double num=entrada.nextDouble();
+        return num;
     }
     public static void khTOms(double k){
-        System.out.println(k+"km/h en m/s es "+k/3.6);
+        System.out.println(k+"km/h en m/s es "+k/3.6);//convierte km/hora a m/seg
     }
     public static void mensajeSalida(){
         System.out.println("Gracias por usar el programa"); //despedida
