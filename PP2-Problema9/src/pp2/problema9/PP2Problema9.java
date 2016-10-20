@@ -30,7 +30,7 @@ public class PP2Problema9 {
     public static void comp(int n){
         System.out.print(n+" = ");
         for(int i=10;i<n*10;i=i*10){
-            System.out.print(((n%i)/(i/10))*(i/10));
+            System.out.print(((n%i)/(i/10))*(i/10));//obtiene el valor de el digito en la posicion i
             if ((i<n))System.out.print(" + ");
         }
         System.out.println("");
