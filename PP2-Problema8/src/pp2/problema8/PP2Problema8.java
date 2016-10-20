@@ -26,7 +26,7 @@ public class PP2Problema8 {
     return num;
     }
     public static void calcularHip(double ad,double op){
-        System.out.println("La hipotenusa es "+Math.sqrt(Math.pow(ad, 2)+Math.pow(op, 2)));
+        System.out.println("La hipotenusa es "+Math.sqrt(Math.pow(ad, 2)+Math.pow(op, 2)));  //calcula c=sqrt(a^2+b^2)
     }
     public static void mensajeSalida(){
         System.out.println("Gracias por usar el programa"); //despedida
