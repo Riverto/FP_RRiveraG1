@@ -27,7 +27,6 @@ public class PP2Problema19 {
     }
     public static void mostrarResultado(double a){
         double b = Math.toRadians(a);
-        System.out.println(b);
         System.out.println("El coseno de "+a+" es: "+Math.cos(b));
         System.out.println("El seno de "+a+" es: "+(Math.sin(b)));
         System.out.println("La tangente de "+a+" es: "+(Math.tan(b)));
