@@ -17,8 +17,8 @@ public class PP2Problema6 {
      */
     public static void main(String[] args) {
         double horas,salario;
-        salario = pedirNumero("pago por hora");
-        horas = pedirNumero("numero de horas");
+        salario = pedirNumero("pago por hora"); //pedir el salario por hora
+        horas = pedirNumero("numero de horas"); //pedir las horas trabajadas
         System.out.println("El pago por "+horas+" a "+salario+" por hora es "+calcularPago(horas, salario));
         cont();
     }
@@ -31,9 +31,9 @@ public class PP2Problema6 {
     public static double calcularPago(double h,double s){
         double pago;
         pago=0;
-        if(h<=40) pago=h*s;
-        if(h>=48) pago=((40*s)+(h-40)*(2*s));
-        if(h>48) pago=((40*s)+8*(2*s)+(h-48)*(3*s));
+        if(h<=40) pago=h*s; //el calculo es directo si es menos de 40
+        if(h>=48) pago=((40*s)+(h-40)*(2*s)); // se calcula y multiplica la diferencia de horas y se suman las 40
+        if(h>48) pago=((40*s)+8*(2*s)+(h-48)*(3*s)); // se calcula, multiplica, y suma las diferencias de horas
         return pago;
     }
     public static void mensajeSalida(){
