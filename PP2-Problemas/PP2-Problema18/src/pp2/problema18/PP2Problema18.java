@@ -35,11 +35,24 @@ public class PP2Problema18 {
         if(m<b)m=b;    //y guarda el
         if(m<c)m=c;     //valor mas grande
         for (int i=2;i<m;i++){
+            int p=0;
             if (a%i==0||b%i==0||c%i==0){//busca valores que sean factores de alguno de los numeros
-                d=d*i;//guarda el producto de los divisores
-                if (a%i==0) a=a/i;//reduce el valor si es divisible por el factor
-                if (b%i==0) b=b/i;//reduce el valor si es divisible por el factor
-                if (c%i==0) c=c/i;//reduce el valor si es divisible por el factor
+                if (a%i==0){
+                    int p1=0;
+                    do {a=a/i;p1++;}
+                    while(a%i==0);
+                    p=p1;}//reduce el valor si es divisible por el factor y guarda numero de pasos
+                if (b%i==0){
+                    int p2=0;
+                    do {b=b/i;p2++;}
+                    while(b%i==0);
+                    if(p2>p)p=p2;}//reduce el valor si es divisible por el factor y compara el numero de pasos y guarda el mayor
+                if (c%i==0){
+                    int p3=0;
+                    do {c=c/i;p3++;}
+                    while(c%i==0);
+                    if(p3>p)p=p3;}//reduce el valor si es divisible por el factor y compara el numero de pasos y guarda el mayor
+                d=(int) (d*(Math.pow(i, p)));//guarda el producto de los divisores
             }
         }
         return d;//muestra el producto de los divisores, que es el minimo comun multiple.
