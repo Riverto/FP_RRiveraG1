@@ -25,7 +25,7 @@ public class PP2Problema11 {
         Scanner entrada = new Scanner(System.in);
         System.out.print("Ingrese el numero (mayor a 0 y menor que 4000) que quiere traducir a romano: ");
         int num=entrada.nextInt();
-        if(num<=0||num>=4000){
+        while(num<=0||num>=4000){
             num = pedirNumero();
         }
         return num;
@@ -34,18 +34,18 @@ public class PP2Problema11 {
         int v,p=0;
         String rom="";
         String []array = new String[4];
-        for(int i=10;i<=n*10;i=i*10){
-            v = ((n%i)/(i/10))*(i/10);
+        for(int i=10;i<=n*10;i=i*10){ //pasa por 10,100,1000...
+            v = ((n%i)/(i/10))*(i/10); //toma el componente de el numero con base a i, si n es 1478 y i es 1000, v es 400
             if(v==0) rom="";
             if(v>0&&v<10)rom=unidades(v);
             if(v>9&&v<100) rom=decenas(v);
             if(v>99&&v<1000) rom=centenas(v);
             if(v>999&&v<10000) rom=milares(v);
-            array[p]=rom;
+            array[p]=rom;//agrega la letra a un arreglo
             p++;
         }
         System.out.print("El numero "+n+" es ");
-        for(int i=(array.length-1);i>=0;i--){
+        for(int i=(array.length-1);i>=0;i--){//muestra el arreglo en reversa sin tener que voltear los datos
             if (array[i]==null){System.out.print("");
                     } else{
                 System.out.print(array[i]);
