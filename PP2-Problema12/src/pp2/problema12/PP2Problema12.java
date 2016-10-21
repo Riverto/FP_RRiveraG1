@@ -29,12 +29,12 @@ public class PP2Problema12 {
         }
     return v;}
     public static void mostrarvector(int[] v){
-        int a=0,p=0;
-        for (int i=1; i<v.length; i+=2){
-            a=v[i]+a;
-            p++;
+        int s=0,p=0;
+        for (int i=1; i<v.length; i+=2){//pasa por 1,3,5,7,9 que son la posición 2,4,6,8,10
+            s=v[i]+s; //suma los numeros en posiciones pares
+            p++; //conteo de datos
         }
-        System.out.println("La media de los numeros en las posiciones pares es: "+(a/p));
+        System.out.println("La media de los numeros en las posiciones pares es: "+(s/p));//muestra el promedio/media
     }
     public static void mensajeSalida(){
         System.out.println("Gracias por usar el programa"); //despedida
