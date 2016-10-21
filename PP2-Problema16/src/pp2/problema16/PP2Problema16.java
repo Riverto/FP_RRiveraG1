@@ -17,10 +17,10 @@ public class PP2Problema16 {
      */
     public static void main(String[] args) {
         int a,b,c;
-        a=pedirNumero("a");
-        b=pedirNumero("b");
-        c=pedirNumero("c");
-        System.out.println("El numero mayor es : "+encontrarMayor(a,b,c));
+        a=pedirNumero("a");//piden
+        b=pedirNumero("b");//los
+        c=pedirNumero("c");//valores
+        System.out.println("El numero mayor es : "+encontrarMayor(a,b,c));//nuestra resultado
         cont();
     }
     public static int pedirNumero(String tipo){
@@ -31,9 +31,9 @@ public class PP2Problema16 {
     }
     public static int encontrarMayor(int a,int b,int c){
         int m;
-        m = a;
-        if(m<b)m=b;
-        if(m<c)m=c;
+        m = a;          //compara
+        if(m<b)m=b;//los numeros
+        if(m<c)m=c; //y regresa el mayor
         return m;
     } 
     public static void mensajeSalida(){
