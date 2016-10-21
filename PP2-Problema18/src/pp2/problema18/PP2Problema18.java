@@ -41,6 +41,6 @@ public class PP2Problema18 {
                 if (c%i==0) c=c/i;//reduce el valor si es divisible por el factor
             }
         }
-        return d;//muestra el divisor
+        return d;//muestra el producto de los divisores, que es el minimo comun multiple.
     }
 }
