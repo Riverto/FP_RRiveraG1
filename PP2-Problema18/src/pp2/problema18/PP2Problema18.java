@@ -21,6 +21,7 @@ public class PP2Problema18 {
         b=pedirNumero("segundo numero");   //  los
         c=pedirNumero("tercer numero");      //datos
         System.out.println("El minimo comun multiple es: "+minimoMultiple(a, b, c));//muestra resultado
+        cont();
     }
     public static int pedirNumero(String tipo){
         Scanner entrada = new Scanner(System.in);
@@ -42,5 +43,28 @@ public class PP2Problema18 {
             }
         }
         return d;//muestra el producto de los divisores, que es el minimo comun multiple.
+    }
+    public static void mensajeSalida(){
+        System.out.println("Gracias por usar el programa"); //despedida
+        System.exit(0);
+    }
+    public static void cont(){
+        int resp;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Desea continuar?");
+        System.out.println("1. Si");
+        System.out.println("0. No");        
+        resp = entrada.nextInt();
+        if (resp<0 || resp>1){
+            cont();} else {
+            switch(resp){
+                case 1:
+                    main(null);
+                    break;
+                default:
+                    mensajeSalida();
+                    break;
+            }
+        }
     }
 }
