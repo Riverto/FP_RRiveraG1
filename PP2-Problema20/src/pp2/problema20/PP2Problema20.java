@@ -31,11 +31,11 @@ public class PP2Problema20 {
     public static void esAmigo(int a, int b){
         int r=1;
         for(int i=2;i<a;i++){
-            if(a%i==0){
+            if(a%i==0){//suma los factores de un valor
                 r=r+i;
             }
         }
-        if(r==b){
+        if(r==b){//si la suma es igual a el 2do valor el numero es amigo, en caso contrario, no lo es.
             System.out.println("El numero "+a+" es amigo de "+b+".");
         } else {
             System.out.println("El numero "+a+" no es amigo de "+b+".");
