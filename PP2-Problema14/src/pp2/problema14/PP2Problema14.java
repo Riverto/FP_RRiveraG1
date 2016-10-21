@@ -23,9 +23,9 @@ public class PP2Problema14 {
         for(int i=0;i<vec.length;i++){
             for(int j=0;j<vec.length;j++){
                 if(i==j){
-                    vec[i][j]=1;
+                    vec[i][j]=1;//inserta 1s cuando los valores i y j son iguales de forma que crea una linea diagonal por el centro
                 } else {
-                    vec[i][j]=0;
+                    vec[i][j]=0;//rellena los espacios faltantes con 0s
                 }
             }
         }
