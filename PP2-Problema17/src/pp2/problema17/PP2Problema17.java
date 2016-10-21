@@ -31,16 +31,16 @@ public class PP2Problema17 {
     }
     public static int divisorComun(int a, int b){
         int c=0,m;
-        m=a;
-        if(m>b)m=b;
+        m=a;              //compara y guarda
+        if(m>b)m=b; //el valor menor
         for (int i=1;i<=m;i++){
-            if (a%i==0&&b%i==0)
-                c=i;
+            if (a%i==0&&b%i==0)//busca valores que sean factores de los numeros
+                c=i;//guarda el ultimo valor que satisfazca la condición
         }
         return c;
     }
     public static void mostrarResultado(int a,int b,int c){
-    System.out.println("El mayor divisor comun de "+a+" y "+b+" es: "+c);
+    System.out.println("El mayor divisor comun de "+a+" y "+b+" es: "+c);//muestra resultado
 }
     public static void mensajeSalida(){
         System.out.println("Gracias por usar el programa"); //despedida
