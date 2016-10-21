@@ -25,19 +25,20 @@ public class PP2Problema15 {
         Random ran = new Random();
         for(int i=0;i<vec.length;i++){
             for(int j=0;j<vec.length;j++){
-                if(j==10){
+                vec[i][j]=ran.nextInt(100+1);//asigna valores a todas las casillas
+                if(j==vec.length-1){//checa si es la ultima columna del vector
                     int s=0;
                     for(j=0;j<vec.length-1;j++){
-                        s = vec[i][j]+s;
+                        s = vec[i][j]+s;//suma todos los valores de la columna
                     }
-                    vec[i][j]=s;
-                } else vec[i][j]=ran.nextInt(100+1);
-                if(i==10){
+                    vec[i][j]=s;//asigna el valor a la ultima casilla de la columna
+                }
+                if(i==vec.length-1){//checa si es la ultima fila del vector
                     int s=0;
                     for(i=0;i<vec.length-1;i++){
-                        s = vec[i][j]+s;
+                        s = vec[i][j]+s;//suma todos los valores de la fila
                     }
-                    vec[i][j]=s;
+                    vec[i][j]=s;//asigna el valor a la ultima casilla de la fila
                 }
             }
         }
