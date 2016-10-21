@@ -35,16 +35,16 @@ public class PP2Problema13 {
     public static int promedioVector(int[] v){
         int a=0,p=0;
         for (int i=0; i<v.length; i++){
-            a=v[i]+a;
-            p++;
+            a=v[i]+a;//suma de todos los datos en el arreglo
+            p++;//conteo de numero en el arreglo
         }
         System.out.println("El promedio de los numeros en el arreglo es: "+(a/p));
-        return (a/p);
+        return (a/p);//promedio
     }
     public static void sobrePromedio(int[] v,int media){
         int ovr=0;
-        for(int i=0;i<v.length;i++){
-            if(v[i]>media){
+        for(int i=0;i<v.length;i++){//pasa por todo el vector y
+            if(v[i]>media){//hace un conteo de todos los numero mayores a el promedio
                 ovr++;
             }
         }
